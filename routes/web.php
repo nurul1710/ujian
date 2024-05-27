@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\customerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard',[
+        "title"=>"Dashboard"
+    ]);
 });
+
+
+
+
+route::resource('pelanggan',customerController::class)->except('destroy');
