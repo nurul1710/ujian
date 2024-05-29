@@ -18,14 +18,14 @@ return new class extends Migration
             $table->double('totalHarga_sewa');
             $table->BigInteger('customer_id')->unsigned();
             $table->BigInteger('baju_id')->unsigned();
-            $table->BigInteger('admin_id')->unsigned();
+            $table->BigInteger('user_id')->unsigned();
             $table->timestamps();
         });
 
         Schema::table('sewas', function (Blueprint $table) {
             $table->foreign('customer_id')->references('id')->on('customers')
             ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('admin_id')->references('id')->on('admins')
+            $table->foreign('user_id')->references('id')->on('users')
             ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('baju_id')->references('id')->on('bajus')
             ->onUpdate('cascade')->onDelete('cascade');

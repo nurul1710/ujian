@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\customerController;
-
+use App\Http\Controllers\adminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +25,4 @@ Route::get('/', function () {
 
 
 route::resource('pelanggan',customerController::class)->except('destroy');
+route::resource('admin',adminController::class)->except('destroy','show','edit','create');

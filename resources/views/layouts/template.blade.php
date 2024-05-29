@@ -97,10 +97,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ ($title==='Users')?'active':''}}">
+                            <a href="{{route('admin.index')}}" class="nav-link {{ ($title==='admin')?'active':''}}">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>
-                                    Users
+                                    Admin
                                 </p>
                             </a>
                         </li>
