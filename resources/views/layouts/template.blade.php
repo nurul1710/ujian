@@ -35,6 +35,31 @@
             <ul class="navbar-nav ml-auto">
 
 
+            <li class="nav-item dropdown">
+   <a class="nav-link" data-toggle="dropdown" href="#">
+      <i class="far fa-user mr-2"></i>{{ Auth::user()->name }}
+      <span class="badge badge-warning navbar-badge"></span>
+   </a>
+   <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <span class="dropdown-item dropdown-header">User Menu</span>
+             <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                 <i class="fas fa-user mr-2"></i> {{ Auth::user()->name }}
+             <span class="float-right text-muted text-sm"></span>
+             </a>
+                       
+             <div class="dropdown-divider"></div>
+              <form action="logout" method="POST">
+               @csrf
+          		<button type="submit" class="dropdown-item">
+<i class="fas fa-sign-out-alt mr-2"></i>Logout
+</button>
+             </form>
+            </div>
+</li>
+
+
+
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                         <i class="fas fa-expand-arrows-alt"></i>
@@ -63,7 +88,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Nurul</a>
+                        <a href="#" class="d-block">{{ Auth::user()->name}}</a>
                     </div>
                 </div>
 
@@ -115,34 +140,14 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link {{  ($title==='laporan') ? 'active' : ''}}">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
                                     Laporan
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="pages/tables/simple.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Harian</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/tables/data.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Bulanan</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Tahunan</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                           
 
 
 
