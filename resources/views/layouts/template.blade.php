@@ -37,14 +37,14 @@
 
             <li class="nav-item dropdown">
    <a class="nav-link" data-toggle="dropdown" href="#">
-      <i class="far fa-user mr-2"></i>{{ Auth::user()->name }}
+      <i class="far fa-user mr-2"></i>{{ Auth::user()->name}}
       <span class="badge badge-warning navbar-badge"></span>
    </a>
    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <span class="dropdown-item dropdown-header">User Menu</span>
              <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item">
-                 <i class="fas fa-user mr-2"></i> {{ Auth::user()->name }}
+                 <i class="fas fa-user mr-2"></i> {{ Auth::user()->name}}
              <span class="float-right text-muted text-sm"></span>
              </a>
                        
@@ -129,7 +129,14 @@
                                 </p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="{{route('baju.index')}}" class="nav-link {{ ($title==='baju') ? 'active':'' }}">
+                                <i class="nav-icon fas fa-cash-register"></i>
+                                <p>
+                                    baju adat
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link {{ ($title==='sewa') ? 'active':'' }}">
                                 <i class="nav-icon fas fa-cash-register"></i>
@@ -139,15 +146,6 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link {{  ($title==='laporan') ? 'active' : ''}}">
-                                <i class="nav-icon fas fa-table"></i>
-                                <p>
-                                    Laporan
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                           
 
 
 
