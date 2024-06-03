@@ -7,14 +7,14 @@
 <!-- Toastr -->
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 @endsection
-@section('judulh1','Admin - Customer')
+@section('judulh1','Admin - Sewa')
 @section('konten')
 <div class="col-md-12">
     <div class="card card-info">
         <div class="card-header">
-            <h2 class="card-title">Data Customer</h2>
-            <a type="button" class="btn btn-success float-right" href="{{ route('pelanggan.create') }}">
-                <i class=" fas fa-plus"></i>Tambah Customer
+            <h2 class="card-title">Data sewa</h2>
+            <a type="button" class="btn btn-success float-right" href="{{ route('sewa.create') }}">
+                <i class=" fas fa-plus"></i>Tambah sewa
             </a>
         </div>
         <!-- /.card-header -->
@@ -24,9 +24,11 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama</th>
-                        <th>No Telepon</th>
-                        <th> Email</th>
+                        <th>user</th>
+                        <th>penyewa</th>
+                        <th>baju</th>
+                        <th>tanggal_peminjaman</th>
+                        <th>tanggal_pengembalian</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -35,15 +37,17 @@
                     @foreach($data as $dt)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
+                        <td>{{ $dt->user->name }}</td>
                         <td>{{ $dt->name }}</td>
-                        <td>{{ $dt->phone }}</td>
-                        <td>{{ $dt->email }}</td>
+                        <td>{{ $dt->baju->nama_baju }}</td>
+                        <td>{{ $dt->tanggal_peminjaman }}</td>
+                        <td>{{ $dt->tanggal_pengembalian }}</td>
                         <td>
                             <div class="btn-group">
-                                <a type="button" class="btn btn-warning" href="{{ route('pelanggan.edit',$dt->id) }}">
+                                <a type="button" class="btn btn-warning" href="{{ route('sewa.edit',$dt->id) }}">
                                     <i class=" fas fa-edit"></i>
                                 </a>
-                                <a type="button" class="btn btn-success" href="{{ route('pelanggan.show',$dt->id) }}">
+                                <a type="button" class="btn btn-success" href="{{ route('sewa.show',$dt->id) }}">
                                     <i class=" fas fa-eye"></i>
                                 </a>
                             </div>

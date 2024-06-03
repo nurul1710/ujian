@@ -36,22 +36,18 @@
                 <label for="harga_perhari" class="form-label">harga perhari</label>
                 <input type="text" class="form-control" id="harga_perhari" name="harga_perhari">
               </div>
-              <div class="mb-3">
-                <label for="quantity" class="form-label">quantity</label>
-                <input type="text" class="form-control" id="quantity" name="quantity">
-              </div>
+              
               <div class="mb-3">
                 <label for="cover" class="form-label">cover</label>
                 <input type="file" class="form-control" id="cover" name="cover">
               </div>
               <div class="mb-3">
-                <label for="status" class="form-label">status</label>
+                <!-- <label for="status" class="form-label">status</label>
                 <select class="form-control" name="status">
                     <option hidden>--Pilih status--</option>
                     <option value="sewa">sewa</option>
-                    <option value="kembali">kembali</option>
                 </select><br>
-              
+-->
              
             <!-- /.card-body -->
 

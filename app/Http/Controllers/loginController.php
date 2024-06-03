@@ -16,7 +16,7 @@ class loginController extends Controller
     public function authenticate(Request $request):RedirectResponse
     {
         $credentials= $request->validate([
-            'email'=> ['required','email:rfc,dns'],
+            'email'=> ['required'],
             'password'=>['required'],
         ]);
         
@@ -36,5 +36,5 @@ class loginController extends Controller
         return redirect('/login');
     }
   }
-  
+
   

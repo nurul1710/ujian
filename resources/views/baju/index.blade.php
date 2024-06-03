@@ -31,12 +31,10 @@
                                 
                                 <p class="card-text">Nama baju: {{ $baju->nama_baju}}</p>
                                 <p class="card-text">size: {{ $baju->size}}</p>
-                                <p class="card-text">quantity: {{ $baju->quantity}}</p>
                                 <p class="card-text">harga perhari: {{ $baju->harga_perhari }}</p>
                                 <p class="card-text">status: {{ $baju->status }}</p>
                                 
                                 <a href="{{ route('baju.edit', $baju->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="{{ route('baju.create',$baju->id) }}" class="btn btn-sm btn-success">sewa</a>
                                 <form action="{{ route('baju.destroy', $baju->id) }}" method="post" class="d-inline">
                                     @csrf
                                     @method('DELETE')

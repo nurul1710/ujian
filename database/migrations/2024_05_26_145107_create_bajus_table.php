@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('nama_baju');
             $table->enum('size', ['XL','L','S','M','XXL']);
             $table->double('harga_perhari');
-            $table->integer('quantity');
             $table->enum('status', ['sewa','kembali']);
             $table->string('cover')->nullable();
             $table->timestamps();

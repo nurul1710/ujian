@@ -20,21 +20,13 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{ route('pelanggan.update',$pelanggan->id) }}" method="POST">
+        <form action="{{ route('sewa.update', $sewa->id) }}" method="POST">
             @csrf
             @method('PUT')
             <div class=" card-body">
                 <div class="form-group">
-                    <label for="name">Nama Pelanggan</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="" value="{{ $pelanggan->name }}">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" value="{{ $pelanggan->email }}">
-                </div>
-                <div class="form-group">
-                    <label for="phone">No Telepon</label>
-                    <input type="text" class="form-control" id="phone" name="phone" value="{{ $pelanggan->phone }}">
+                    <label for="status">kembalikan baju</label>
+                    <input type="text" class="form-control" id="status" name="status" placeholder="" value="{{ $sewa->status }}">
                 </div>
             </div>
             <!-- /.card-body -->

@@ -38,10 +38,6 @@
                 <input type="text" class="form-control" id="harga" name="harga" value="{{$baju->harga}}">
               </div>
 
-              <div class="mb-3">
-                <label for="jumlah" class="form-label">quantity</label>
-                <input type="text" class="form-control" id="jumlah" name="jumlah" value="{{$baju->jumlah}}">
-              </div>
             
               <div class="mb-3">
                 <label for="cover" class="form-label">cover</label>

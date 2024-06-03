@@ -29,8 +29,8 @@ class bajucontroller extends Controller
         "nama_baju"=>"required",
         "size"=>"required",
         "harga_perhari"=>"required",
-        "quantity"=>"required",
-        "status"=>"required",
+        //"quantity"=>"required",
+        //"status"=>"required",
         "cover"=>"image|file|max:1024"
         ]);
         if ($request->file('cover')){
@@ -50,8 +50,8 @@ class bajucontroller extends Controller
             "nama_baju"=>"required",
             "size"=>"required",
             "harga_perhari"=>"required",
-            "quantity"=>"required",
-            "status"=>"required",
+            //"quantity"=>"required",
+          //  "status"=>"required",
             "cover"=>"image|file|max:1024"
         ]);
         if ($request->file('cover')){
